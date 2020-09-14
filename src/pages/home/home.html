@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar color="LightCoral">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>เข้าสู่ะบบ</ion-title>
+   
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class = "bg">
+  
+
+    
+    <ion-card-content >
+      <ion-list inset >
+        <ion-item >
+          <ion-label floating><p>ชื่อผู้ใช้ :</p></ion-label>
+          <ion-input type="text"  value="" [(ngModel)]="logindata.username"></ion-input>
+        </ion-item>
+      
+        <ion-item >
+          <ion-label floating><p>รหัสผ่าน :</p></ion-label>
+          <ion-input type="password"  value=""[(ngModel)]="logindata.password"></ion-input>
+        </ion-item>
+      </ion-list>
+    
+      <button ion-button round full color ="secondary" (click)="Login()" >เข้าสู่ระบบ</button>
+      <button ion-button round full  (click) ="RegisLecturer()">ลงทะเบียนวิทยากร</button>
+      <button ion-button round full  (click) ="RegisParticipants()">ลงทะเบียนผู้เข้าอบรม</button>
+    
+    
+
+    </ion-card-content>
+ 
+
+  
+  
+</ion-content>

@@ -1,0 +1,32 @@
+<!--
+  Generated template for the LecturerDataPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ข้อมูลการอบรม</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!-- <p><b>ข้อมูลการอบรม</b></p> -->
+  <table>
+    <tr>
+      <th> ชื่อการอบรม </th>  
+      <th>  วันที่่ </th>
+    </tr> 
+  </table>
+    <!-- &nbsp; &nbsp; -->
+
+    <table  *ngFor="let item of lec" (click)="getdetail()">
+      <tr>
+        <td> {{item.T_Name}} </td>  
+        <td> {{item.Date}} </td> 
+      </tr>
+    </table>
+</ion-content>
