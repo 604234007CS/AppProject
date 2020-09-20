@@ -15,6 +15,8 @@
 
 <ion-content padding>
   <p><b>ข้อมูลการอบรม</b></p>
+ 
+ 
   <table>
     <tr>
       <th> ชื่อการอบรม &nbsp; &nbsp;</th>  
@@ -22,11 +24,13 @@
     </tr> 
   </table>
 
-  <table  *ngFor="let item of lec">
+  <table  *ngFor="let item of lec" (click)="getdetail(item)">
     <tr>
       <td> &nbsp;  {{item.T_Name}} </td>  
       <td> {{item.Date}} </td> 
     </tr>
   </table>
+
+
 
 </ion-content>

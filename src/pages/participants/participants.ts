@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { TrainPage } from '../train/train';
 // import { Storage } from '@ionic/storage';
 /**
  * Generated class for the ParticipantsPage page.
@@ -50,6 +51,12 @@ export class ParticipantsPage {
   //  }
   ParticipantsData(id){
     this.navCtrl.push("ParticipantsDataPage",id);
+  }
+
+  Trains(id){
+    this.navCtrl.push(TrainPage,{
+      P_ID:id
+    })
   }
 
 }

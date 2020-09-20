@@ -1,0 +1,27 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>รายละเอียดการอบรม</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card-content >
+    <!-- <h2>รายละเอียดข้อมูลการอบรม</h2> -->
+    <p><b>รายละเอียดข้อมูลการอบรม </b></p>
+    <p><b>ชื่อการอบรม :</b>{{training.T_Name}}</p>
+    <p><b>สถานที่จัดอบรม :</b>{{training.Address}}</p>
+    <p><b>วันที่ :</b>{{training.Date}}</p>
+    <p><b>เวลา :</b>{{training.Time}}</p>
+    <p><b>วิทยากร :</b>{{training.L_Name}}</p>
+    
+    
+    <button ion-button secondary (click)= "Evaluation()" >ประเมินผลการอบรม</button>
+
+   
+</ion-card-content>
+
+
+</ion-content>

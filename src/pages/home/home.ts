@@ -58,7 +58,7 @@ export class HomePage {
         // let dParti = data;  //dtae
         // this.storage.set('Array',dParti);
 
-        this.navCtrl.setRoot(LecturerPage,data);
+        this.navCtrl.setRoot(ParticipantsPage,data);
         }
         console.log(data);
 

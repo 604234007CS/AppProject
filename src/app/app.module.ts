@@ -8,6 +8,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -51,7 +52,7 @@ import { IonicStorageModule } from '@ionic/storage';
     ParticipantsPage,
     LogoutPage,
     TrainPage,
-    TrainDetialPage,
+    TrainDetialPage
    
     
   ],

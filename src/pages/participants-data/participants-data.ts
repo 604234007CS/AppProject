@@ -42,4 +42,8 @@ export class ParticipantsDataPage {
     });
   }
 
+  getdetail(item){
+    this.navCtrl.push("ParticipantsDatadetailPage",item);
+  }
+
 }

@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the TrainDetialPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-train-detial',
@@ -35,9 +28,9 @@ export class TrainDetialPage {
     this.navCtrl.push("NamePage");
   }
 
-  Evaluation(){
-    this.navCtrl.push("EvaluationPage");
-  }
+  // Evaluation(){
+  //   this.navCtrl.push("EvaluationPage");
+  // }
 
   Register(){
     this.navCtrl.push("RegisterPage");
