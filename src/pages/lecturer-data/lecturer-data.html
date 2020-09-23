@@ -23,7 +23,7 @@
   </table>
     <!-- &nbsp; &nbsp; -->
 
-    <table  *ngFor="let item of lec" (click)="getdetail()">
+    <table  *ngFor="let item of lec" (click)="getdetail(item)">
       <tr>
         <td> {{item.T_Name}} </td>  
         <td> {{item.Date}} </td> 

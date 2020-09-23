@@ -42,9 +42,11 @@ export class LecturerDataPage {
 
 }
 
-getdetail(){
-  this.navCtrl.push(LecturerDatadetialPage);
-}
+  getdetail(item){
+    this.navCtrl.push("LecturerDatadetialPage",item);
+  }
+
+
 }
 
 

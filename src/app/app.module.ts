@@ -20,6 +20,7 @@ import { TrainDetialPage } from '../pages/train-detial/train-detial';
 import { LogoutPage } from '../pages/logout/logout';
 
 import { IonicStorageModule } from '@ionic/storage';
+import { LoginPage } from '../pages/login/login';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { IonicStorageModule } from '@ionic/storage';
     ParticipantsPage,
     LogoutPage,
     TrainPage,
-    TrainDetialPage
+    TrainDetialPage,
+    LoginPage,
     
     
     
@@ -52,7 +54,9 @@ import { IonicStorageModule } from '@ionic/storage';
     ParticipantsPage,
     LogoutPage,
     TrainPage,
-    TrainDetialPage
+    TrainDetialPage,
+    LoginPage,
+
    
     
   ],

@@ -7,12 +7,35 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>lecturer_datadetial</ion-title>
+    <ion-title>รายละเอียดการอบรม</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card-content >
+    <p><b>รายละเอียดข้อมูลการอบรม </b></p>
+    <p><b>ชื่อการอบรม :</b>{{training.T_Name}}</p>
+    <p><b>สถานที่จัดอบรม :</b>{{training.Address}}</p>
+    <p><b>วันที่ :</b>{{training.Date}}</p>
+    <p><b>เวลา :</b>{{training.Time}}</p>
+    <!-- <p><b>วิทยากร :</b>{{training.L_Name}}</p> -->
+  </ion-card-content>
+
+  <p><b>รายชื่อผู้เข้าอบรม </b></p>
+  <table>
+    <tr>
+       <th> ชื่อ-สกุล </th> 
+      <th> เบอร์โทรศัพท์ </th>
+    </tr> 
+  </table>
+
+  <table  *ngFor="let item of regis" >
+    <tr>
+      <td> {{item.P_Name}} </td>  
+      <td> {{item.Tell}} </td> 
+    </tr>
+  </table>
 
 </ion-content>

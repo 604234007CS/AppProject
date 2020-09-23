@@ -26,18 +26,15 @@
  
   <ion-item *ngFor="let item of logindata">
    
-    <p><b>คำนำหน้า : </b>{{item.Dir_Name}}</p>
-    <p><b>ชื่อ : </b>{{item.P_Name}}</p>
+    <p><b>ชื่อ-สกุล : </b>{{item.Dir_Name}} {{item.P_Name}}</p>
+    <!-- <p><b>ชื่อ : </b>{{item.P_Name}}</p> -->
     <p><b>หมายเลขโทรศัพท์ : </b>{{item.Tell}}</p>
-
+    
     <button ion-button round full  (click) ="ParticipantsData(item.P_ID)">เเสดงข้อมูลการอบรม</button>
     <button ion-button round full  (click) ="Trains(item.P_ID)">การอบรม</button>
 
   </ion-item>
-<!--  
-  <p><b>ข้อมูลการลงทะเบียนอบรม</b></p> -->
 
-  <!-- <button ion-button round full  (click) ="ParticipantsData(item.P_ID)">เเสดงข้อมูลการอบรม</button> -->
 
 
 

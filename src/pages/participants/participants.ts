@@ -18,10 +18,9 @@ export class ParticipantsPage {
   
   
   logindata :any =[];
-  trianlecturer: any;
   train: any;
   
-  Pdata: any;
+  
   dataParti = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams ) {
@@ -41,14 +40,7 @@ export class ParticipantsPage {
     this.navCtrl.push("EditParticipantsPage",logindata);
    }
 
-  //  loadPData(){
-  //    this.storage.get('Array').then((data)=>{
-  //      this.Pdata = data;
-
-  //       this.dataParti = this.Pdata;
-  //       console.log(this.dataParti);
-  //    });
-  //  }
+  
   ParticipantsData(id){
     this.navCtrl.push("ParticipantsDataPage",id);
   }

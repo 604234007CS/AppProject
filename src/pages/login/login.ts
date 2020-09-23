@@ -1,39 +1,42 @@
-import { ParticipantsPage } from './../participants/participants';
+import { LecturerPage } from './../lecturer/lecturer';
 import { Component } from '@angular/core';
-import { NavController, NavParams, Events } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-import { LecturerPage } from '../lecturer/lecturer';
+import { Events } from 'ionic-angular';
+
+/**
+ * Generated class for the LoginPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-login',
+  templateUrl: 'login.html',
 })
-export class HomePage {
+export class LoginPage {
   logindata:any = {};
 
-  constructor(public navCtrl: NavController ,public navParams: NavParams ,public event : Events,
-    public http:HttpClient) {
-       
-      
 
-    this.logindata.username = "";
-    this.logindata.password = "";
-
+  constructor(public navCtrl: NavController, public navParams: NavParams,public event : Events, public http:HttpClient) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    console.log('ionViewDidLoad LoginPage');
   }
 
-  Login(){
 
+  Login1(){
     if(this.logindata.username != "" && this.logindata.password!= ""){
       console.log("user:",this.logindata.username);
       console.log("pass:",this.logindata.password);
 
       
 
-      let url:string = "http://localhost/AppService/login.php";
+      let url:string = "http://localhost/AppService/login1.php";
       // let dataPost = JSON.stringify({
       //                   user:this.logindata.username,
       //                   pass:this.logindata.password,
@@ -54,7 +57,7 @@ export class HomePage {
         if(data != null){
         this.event.publish('username:Login');
 
-        this.navCtrl.setRoot(ParticipantsPage,data);
+        this.navCtrl.setRoot(LecturerPage,data);
         }
         console.log(data);
 
@@ -65,11 +68,13 @@ export class HomePage {
       console.log("Enter Password");
       alert("กรุณากรอกข้อมูลให้ครบถ้วน");
     }
+  
   }
+
 
   
 
-  RegisParticipants(){
-    this.navCtrl.push("RegisParticipantsPage");
+  RegisLecturer(){
+    this.navCtrl.push("RegisLecturerPage");
   }
 }

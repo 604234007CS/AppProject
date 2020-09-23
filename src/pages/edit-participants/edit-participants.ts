@@ -40,13 +40,13 @@ export class EditParticipantsPage {
     this.participantdata = this.navParams.data;
     console.log(this.participantdata);
     console.log(this.participantdata[0]['P_ID']);
+   
     this.P_ID = this.participantdata[0]['P_ID'];
     this.Dir_Name = this.participantdata[0]['Dir_Name'];
     this.P_Name = this.participantdata[0]['P_Name'];
     this.Tell = this.participantdata[0]['Tell'];
     this.Username = this.participantdata[0]['Username'];
     this.Password = this.participantdata[0]['Password'];
-
 
     if(this.P_ID != null){
       this.postdata.P_ID = this.P_ID;

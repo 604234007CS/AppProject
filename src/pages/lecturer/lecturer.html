@@ -23,8 +23,8 @@
 
 <ion-content padding>
   <ion-item *ngFor="let item of logindata"> 
-         <p>คำนำหน้า : {{item.Dir_Name}}</p>
-         <p>ชื่อ : {{item.L_Name}}</p>
+         <p>ชื่อ-สกุล : {{item.Dir_Name}} {{item.L_Name}}</p>
+         <!-- <p>ชื่อ : {{item.L_Name}}</p> -->
          <p>หมายลขโทรศัพท์ : {{item.Tell}}</p>
          <p>สถานที่ทำงาน : {{item.Workplace}}</p>
         

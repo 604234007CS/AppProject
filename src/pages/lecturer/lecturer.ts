@@ -16,10 +16,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class LecturerPage {
 
   logindata :any =[];
-  trianlecturer: any;
   train: any;
 
-  acountuser;
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -31,16 +30,12 @@ export class LecturerPage {
 
 
 
-  goedit1(data){
-    this.navCtrl.push("EditLecturerPage",{
-      acountuser:data
-    });
+  goedit1(logindata){
+    this.navCtrl.push("EditLecturerPage",logindata);
    }
 
    LecturerData(id){
-     this.navCtrl.push("LecturerDataPage",id);
-    // console.log(id);
-    
+     this.navCtrl.push("LecturerDataPage",id);    
    }
 
 

@@ -24,4 +24,9 @@ export class LoaddataProvider {
     return this.http.get(url);
   }
 
+  showRe(){
+    const url = "http://localhost/Appservice/show_register.php";
+    return this.http.get(url);
+  }
+
 }

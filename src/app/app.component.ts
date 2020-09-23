@@ -10,6 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ParticipantsPage } from '../pages/participants/participants';
 import { LogoutPage } from '../pages/logout/logout';
+import { LoginPage } from '../pages/login/login';
 // import { RegisParticipantsPage } from '../pages/regis-participants/regis-participants';
 
 @Component({
@@ -27,25 +28,22 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'ลงชื่่อเข้าใช้', component: HomePage },
-      { title: 'การอบรม', component: TrainPage },
-
+      { title: 'สำหรับผู้เข้าอบรม', component: HomePage },
+      { title: 'สำหรับวิทยากร', component: LoginPage },
       
 
     ];
 
     event.subscribe('username:Login',()=>{
       this.pages = [
-      { title: 'ข้อมูลผู้ใช้', component: ParticipantsPage },
-      { title: 'การอบรม', component: TrainPage },
       { title: 'ออกจากระบบ', component: LogoutPage },
       ];
     });
 
     event.subscribe('username:Loguot',()=>{
       this.pages = [
-        { title: 'ลงชื่่อเข้าใช้', component: HomePage },
-        { title: 'การอบรม', component: TrainPage },
+        { title: 'สำหรับผู้เข้าอบรม', component: HomePage },
+        { title: 'สำหรับวิทยากร', component: LoginPage },
         ];
     });
 

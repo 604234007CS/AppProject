@@ -29,11 +29,6 @@ export class EditLecturerPage {
   Password : string;
  
 
-  
-
-  
-
-
   constructor(public navCtrl: NavController,
                      public navParams: NavParams,
                      public http : HttpClient) {
@@ -44,13 +39,15 @@ export class EditLecturerPage {
     this.lecturerdata = this.navParams.data;
     console.log(this.lecturerdata);
     console.log(this.lecturerdata[0]['L_ID']);
-    this.L_ID = (this.lecturerdata[0]['L_ID']);
-    this.Dir_Name = (this.lecturerdata[0]['Dir_Name']);
-    this.L_Name = (this.lecturerdata[0]['L_Name']);
-    this.Tell = (this.lecturerdata[0]['Tell']);
-    this.Workplace = (this.lecturerdata[0]['Workplace']);
-    this.Username = (this.lecturerdata[0]['Username']);
-    this.Password = (this.lecturerdata[0]['Password']);
+    
+    
+    this.L_ID = this.lecturerdata[0]['L_ID'];
+    this.Dir_Name = this.lecturerdata[0]['Dir_Name'];
+    this.L_Name = this.lecturerdata[0]['L_Name'];
+    this.Tell = this.lecturerdata[0]['Tell'];
+    this.Workplace = this.lecturerdata[0]['Workplace'];
+    this.Username = this.lecturerdata[0]['Username'];
+    this.Password = this.lecturerdata[0]['Password'];
 
     if(this.L_ID != null){
       this.postdata.L_ID = this.L_ID;

@@ -21,7 +21,7 @@ export class RegisLecturerPage {
   }
 
   Register(){
-      let url = 'http://127.0.0.1/AppService/lecturer/insert_regis.php';
+      let url = 'http://localhost/AppService/lecturer/insert_regis.php';
 
       let postdataset = new FormData();
   

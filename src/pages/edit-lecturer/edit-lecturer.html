@@ -9,18 +9,18 @@
 
 <ion-content padding>
 
-  <!-- <ion-item >
-    <ion-label fixed>คำนำหน้า : {{lecturerdata.Dir_Name}}</ion-label>
-    <ion-input type="text" value="" [(ngModel)]="postdata.Dir_Name" ></ion-input>
-  </ion-item> -->
-
-  <ion-item>
+  <!-- <ion-item>
     <ion-label><P>คำนำหน้า : {{lecturerdata.Dir_Name}}</P></ion-label>
     <ion-select [(ngModel)]="postdata.DirName">
       <ion-option value="นาย"><p>นาย</p></ion-option>
       <ion-option value="นางสาว"><p>นางสาว</p></ion-option>
       <ion-option value="นาง"><p>นาง</p></ion-option>
     </ion-select>
+  </ion-item> -->
+
+  <ion-item >
+    <ion-label fixed><p>คำนำหน้า :{{lecturerdata.Dir_Name}}</p></ion-label>
+    <ion-input type="text" value="" [(ngModel)]="postdata.Dir_Name" ></ion-input>
   </ion-item>
  
   <ion-item >

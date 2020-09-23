@@ -22,11 +22,16 @@
     <ion-item>
       <ion-label><P>คำนำหน้า :</P></ion-label>
       <ion-select [(ngModel)]="postdata.DirName">
-        <ion-option value="นาย"><p>นาย</p></ion-option>
-        <ion-option value="นางสาว"><p>นางสาว</p></ion-option>
+        <ion-option value="น"><p>นาย</p></ion-option>
+        <ion-option value="นส"><p>นางสาว</p></ion-option>
         <ion-option value="นาง"><p>นาง</p></ion-option>
       </ion-select>
     </ion-item>
+<!-- 
+    <ion-item>
+      <ion-label><p>คำนำหน้า :</p></ion-label>
+      <ion-input type="text" value="" [(ngModel)] = "postdata.DirName"></ion-input>
+    </ion-item> -->
 
     <ion-item>
       <ion-label><p>ชื่อ-นามสกุล :</p></ion-label>

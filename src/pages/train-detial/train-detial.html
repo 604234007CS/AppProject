@@ -7,12 +7,6 @@
 
   <ion-navbar>
     <ion-title>รายละเอียดการอบรม</ion-title>
-    <!-- <ion-buttons end (click) = "Participants()">
-      <button ion-button icon-only>
-      <ion-icon let right name="contacts"></ion-icon>
-    </button>
-    </ion-buttons> -->
-    
   </ion-navbar>
 </ion-header>
 
@@ -28,8 +22,24 @@
     <p><b>วิทยากร :</b>{{training.L_Name}}</p>
 
     <ion-buttons end>
-      <button ion-button secondary small (click)= "Register()" >ลงทะเบียน</button>
+      <button ion-button secondary small >ลงทะเบียน</button>
     </ion-buttons>
+  
+    <!-- <p><b>รายชื่อผู้เข้าอบรม </b></p>
+      <table>
+        <tr>
+          <th> ชื่อ-สกุล </th> 
+          <th> เบอร์โทรศัพท์ </th>
+        </tr> 
+      </table>
+
+      <table  *ngFor="let item of regis" >
+        <tr>
+          <td> {{item.P_Name}} </td>  
+          <td> {{item.Tell}} </td> 
+        </tr>
+      </table> -->
+
 </ion-card-content>
 
 

@@ -20,30 +20,30 @@
   <p><b>ประเมินความพึงพอใจสำหรับผู้เข้าอบรม</b></p>
   <ion-list>
     <p>1)ด้านวิทยากร</p>
-      
+    
     <ion-item>
         <ion-label>
           <p>การถ่ายทอดความรู้ของวิทยากรมีความชัดเจน</p>
         </ion-label>
-        <ion-select>
-            <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-            <ion-option value="มาก">มาก</ion-option>
-            <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-            <ion-option value="น้อย">น้อย</ion-option>
-            <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+        <ion-select  [(ngModel)]="postdata.Clarity">
+            <ion-option value="5">มากที่สุด</ion-option>
+            <ion-option value="4">มาก</ion-option>
+            <ion-option value="3">ปานกลาง</ion-option>
+            <ion-option value="2">น้อย</ion-option>
+            <ion-option value="1">น้อยที่สุด</ion-option>
         </ion-select>
-      </ion-item>  
+      </ion-item> 
 
       <ion-item>
         <ion-label>
           <p>ความสามารถในการอธิบายเนื้อหา</p>
         </ion-label>
-        <ion-select>
-            <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-            <ion-option value="มาก">มาก</ion-option>
-            <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-            <ion-option value="น้อย">น้อย</ion-option>
-            <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+        <ion-select  [(ngModel)]="postdata.Ability">
+            <ion-option value="5">มากที่สุด</ion-option>
+            <ion-option value="4">มาก</ion-option>
+            <ion-option value="3">ปานกลาง</ion-option>
+            <ion-option value="2">น้อย</ion-option>
+            <ion-option value="1">น้อยที่สุด</ion-option>
         </ion-select>
       </ion-item>
       
@@ -51,12 +51,12 @@
         <ion-label>
           <p>การเชื่อมโยงเนื้อหาในการฝึกอบรม</p>
         </ion-label>
-        <ion-select>
-            <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-            <ion-option value="มาก">มาก</ion-option>
-            <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-            <ion-option value="น้อย">น้อย</ion-option>
-            <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+        <ion-select  [(ngModel)]="postdata.ContentAssociation">
+            <ion-option value="5">มากที่สุด</ion-option>
+            <ion-option value="4">มาก</ion-option>
+            <ion-option value="3">ปานกลาง</ion-option>
+            <ion-option value="2">น้อย</ion-option>
+            <ion-option value="1">น้อยที่สุด</ion-option>
         </ion-select>
       </ion-item>
 
@@ -64,12 +64,12 @@
         <ion-label>
           <p>มีความครบถ้วนของเนื้อหาในการฝึกอบรม</p>
         </ion-label>
-        <ion-select>
-            <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-            <ion-option value="มาก">มาก</ion-option>
-            <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-            <ion-option value="น้อย">น้อย</ion-option>
-            <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+        <ion-select  [(ngModel)]="postdata.Completeness">
+            <ion-option value="5">มากที่สุด</ion-option>
+            <ion-option value="4">มาก</ion-option>
+            <ion-option value="3">ปานกลาง</ion-option>
+            <ion-option value="2">น้อย</ion-option>
+            <ion-option value="1">น้อยที่สุด</ion-option>
         </ion-select>
       </ion-item>
   </ion-list>
@@ -81,12 +81,12 @@
       <ion-label>
         <p>ความรู้ ความเข้าใจในเรื่องนี้ก่อนการอบรม</p>
       </ion-label>
-      <ion-select>
-          <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-          <ion-option value="มาก">มาก</ion-option>
-          <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-          <ion-option value="น้อย">น้อย</ion-option>
-          <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+      <ion-select  [(ngModel)]="postdata.BeforeTraining">
+          <ion-option value="5">มากที่สุด</ion-option>
+          <ion-option value="4">มาก</ion-option>
+          <ion-option value="3">ปานกลาง</ion-option>
+          <ion-option value="2">น้อย</ion-option>
+          <ion-option value="1">น้อยที่สุด</ion-option>
       </ion-select>
     </ion-item>  
 
@@ -94,12 +94,12 @@
       <ion-label>
         <p>ความรู้ ความเข้าใจในเรื่องนี้หลังการอบรม</p>
       </ion-label>
-      <ion-select>
-          <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-          <ion-option value="มาก">มาก</ion-option>
-          <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-          <ion-option value="น้อย">น้อย</ion-option>
-          <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+      <ion-select  [(ngModel)]="postdata.AfterTraining">
+          <ion-option value="5">มากที่สุด</ion-option>
+          <ion-option value="4">มาก</ion-option>
+          <ion-option value="3">ปานกลาง</ion-option>
+          <ion-option value="2">น้อย</ion-option>
+          <ion-option value="1">น้อยที่สุด</ion-option>
       </ion-select>
     </ion-item>  
 
@@ -112,12 +112,12 @@
       <ion-label>
         <p>สามารถนำความรู้ที่ได้รับไปประยุกต์ใช้ในการปฏิบัติงานได้</p>
       </ion-label>
-      <ion-select>
-          <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-          <ion-option value="มาก">มาก</ion-option>
-          <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-          <ion-option value="น้อย">น้อย</ion-option>
-          <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+      <ion-select  [(ngModel)]="postdata.Applied">
+          <ion-option value="5">มากที่สุด</ion-option>
+          <ion-option value="4">มาก</ion-option>
+          <ion-option value="3">ปานกลาง</ion-option>
+          <ion-option value="2">น้อย</ion-option>
+          <ion-option value="1">น้อยที่สุด</ion-option>
       </ion-select>
     </ion-item>  
 
@@ -125,12 +125,12 @@
       <ion-label>
         <p>มีความมั่นใจและสามารถนำความรู้ที่ได้รับไปใช้ได้</p>
       </ion-label>
-      <ion-select>
-          <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-          <ion-option value="มาก">มาก</ion-option>
-          <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-          <ion-option value="น้อย">น้อย</ion-option>
-          <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+      <ion-select  [(ngModel)]="postdata.KnowledgeGained">
+          <ion-option value="5">มากที่สุด</ion-option>
+          <ion-option value="4">มาก</ion-option>
+          <ion-option value="3">ปานกลาง</ion-option>
+          <ion-option value="2">น้อย</ion-option>
+          <ion-option value="1">น้อยที่สุด</ion-option>
       </ion-select>
     </ion-item> 
     
@@ -138,12 +138,12 @@
       <ion-label>
         <p>สามารถนำความรู้ไปเผยแพร่/ถ่ายทอดได้</p>
       </ion-label>
-      <ion-select>
-          <ion-option value="มากที่สุด">มากที่สุด</ion-option>
-          <ion-option value="มาก">มาก</ion-option>
-          <ion-option value="ปานกลาง">ปานกลาง</ion-option>
-          <ion-option value="น้อย">น้อย</ion-option>
-          <ion-option value="น้อยที่สุด">น้อยที่สุด</ion-option>
+      <ion-select  [(ngModel)]="postdata.Transferable">
+          <ion-option value="5">มากที่สุด</ion-option>
+          <ion-option value="4">มาก</ion-option>
+          <ion-option value="3">ปานกลาง</ion-option>
+          <ion-option value="2">น้อย</ion-option>
+          <ion-option value="1">น้อยที่สุด</ion-option>
       </ion-select>
     </ion-item>
   </ion-list>
@@ -152,11 +152,11 @@
   <ion-list>
     <p>ข้อเสนอเเนะ :</p>
     <ion-item>
-      <ion-input type="text" placeholder="ข้อเสนอเเนะ"></ion-input>
+      <ion-input type="text" value="" [(ngModel)] = "postdata.Suggestion" placeholder="ข้อเสนอเเนะ"></ion-input>
     </ion-item>
   </ion-list>
 
   <ion-buttons end>
-    <button ion-button color="secondary" small>ส่งแบบประเมิน</button>
+    <button ion-button color="secondary" small (click) = "Evaluation()" >ส่งแบบประเมิน</button>
   </ion-buttons>
 </ion-content>

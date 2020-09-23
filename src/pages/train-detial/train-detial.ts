@@ -10,8 +10,11 @@ export class TrainDetialPage {
   training: any=[];
   // data: Object=[];
 
+  
   constructor(public navCtrl: NavController, public navParams: NavParams ) {
   }
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TrainDetialPage');
@@ -32,9 +35,9 @@ export class TrainDetialPage {
   //   this.navCtrl.push("EvaluationPage");
   // }
 
-  Register(){
-    this.navCtrl.push("RegisterPage");
-  }
+  // Register(){
+  //   this.navCtrl.push("RegisterPage");
+  // }
 
   // Participants(){
   //   this.navCtrl.push("ParticipantsPage");
