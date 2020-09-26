@@ -21,6 +21,9 @@
     <p><b>เวลา :</b>{{training.Time}}</p>
     <p><b>วิทยากร :</b>{{training.L_Name}}</p>
 
+    <button ion-button secondary full small (click)="Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
+
+
     <ion-buttons end>
       <button ion-button secondary small >ลงทะเบียน</button>
     </ion-buttons>
@@ -45,7 +48,7 @@
 
 
 <!-- <button ion-button secondary (click)= "Evaluation()" >ประเมินผลการอบรม</button> -->
-<button ion-button secondary (click)="Name()" >รายชื่อผู้เข้าอบรม</button>
+<!-- <button ion-button secondary full small (click)="Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button> -->
 
 
 </ion-content>

@@ -1,14 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the ParticipantsDatadetailPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-
 @IonicPage()
 @Component({
   selector: 'page-participants-datadetail',
@@ -29,6 +21,16 @@ export class ParticipantsDatadetailPage {
 
   Evaluation(){
     this.navCtrl.push("EvaluationPage");
+  }
+
+  Name1(T_ID){
+    console.log(T_ID);
+    this.navCtrl.push("Name1Page",T_ID);
+  }
+
+  
+  godelete(){
+    this.navCtrl.push("DeleteTrainPage");
   }
 
 }

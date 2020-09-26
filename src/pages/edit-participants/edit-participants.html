@@ -10,19 +10,10 @@
 <ion-content padding>
  
   <ion-item >
-    <ion-label fixed>คำนำหน้า : {{participantdata.Dir_Name}}</ion-label>
+    <ion-label fixed><p>คำนำหน้า : {{participantdata.Dir_Name}}</p></ion-label>
     <ion-input type="text" value="" [(ngModel)]="postdata.Dir_Name" ></ion-input>
   </ion-item>
 
-  <!-- <ion-item>
-    <ion-label><P>คำนำหน้า : {{participantdata.Dir_Name}}</P></ion-label>
-    <ion-select [(ngModel)]="postdata.DirName">
-      <ion-option value="นาย"><p>นาย</p></ion-option>
-      <ion-option value="นางสาว"><p>นางสาว</p></ion-option>
-      <ion-option value="นาง"><p>นาง</p></ion-option>
-    </ion-select>
-  </ion-item> -->
- 
   <ion-item >
     <ion-label fixed><p>ชื่อ-นามสกุล :{{participantdata.P_Name}}</p></ion-label>
     <ion-input type="text" value="" [(ngModel)]="postdata.P_Name" ></ion-input>
@@ -43,6 +34,6 @@
     <ion-input type="password" value="" [(ngModel)] = "postdata.Password"></ion-input>
   </ion-item>
 
-  <button ion-button round full (click)="Edit()"> ยืนยันการแก้ไขข้อมูล </button>
+  <button ion-button full small (click)="Edit()"> ยืนยันการแก้ไขข้อมูล </button>
 
 </ion-content>

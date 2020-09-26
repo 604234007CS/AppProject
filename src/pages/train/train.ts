@@ -20,7 +20,7 @@ export class TrainPage {
  
 
   
-  constructor(public navCtrl: NavController, public navParams: NavParams,  public porm: LoaddataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,  public datas: LoaddataProvider) {
   this.loaddata();
   }
 
@@ -33,9 +33,9 @@ export class TrainPage {
 
  
   loaddata(){
-    this.porm.getTrain().subscribe(porms=>{
-      this.data=porms;
-      console.log(porms);
+    this.datas.getTrain().subscribe(datas=>{
+      this.data=datas;
+      console.log(datas);
     });
   }
  
@@ -50,8 +50,8 @@ export class TrainPage {
     let val = ev.target.value;
 
     if (val != 0) {
-      this.porm.searchtrain(val).subscribe(porms => {
-        this.data = porms;
+      this.datas.searchtrain(val).subscribe(datas => {
+        this.data = datas;
       });
     }else {
       this.loaddata();

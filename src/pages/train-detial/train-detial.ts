@@ -20,15 +20,14 @@ export class TrainDetialPage {
     console.log('ionViewDidLoad TrainDetialPage');
     this.training = this.navParams.data;
     console.log(this.training);
-    
   }
 
   RegisTrain(){
 
   }
   
-  Name(){
-    this.navCtrl.push("NamePage");
+  Name1(T_ID){
+    this.navCtrl.push("Name1Page",T_ID);
   }
 
   // Evaluation(){

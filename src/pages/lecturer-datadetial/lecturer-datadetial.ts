@@ -32,21 +32,25 @@ export class LecturerDatadetialPage {
     console.log(this.training);
   }
 
-  ionViewWillEnter(){
-    // console.log(this.id);
+  // ionViewWillEnter(){
+  //   // console.log(this.id);
 
-    let url: string = "http://localhost/Appservice/show_register.php";
-    let dataPost = new FormData();
-    dataPost.append('id', this.id);
-    let data: Observable<any> = this.http.post(url, dataPost);
-    data.subscribe(data => {
-        // console.log(data);
-        this.regis = data;
-        console.log(this.regis);
+  //   let url: string = "http://localhost/Appservice/show_register.php";
+  //   let dataPost = new FormData();
+  //   dataPost.append('id', this.id);
+  //   let data: Observable<any> = this.http.post(url, dataPost);
+  //   data.subscribe(data => {
+  //       // console.log(data);
+  //       this.regis = data;
+  //       console.log(this.regis);
   
-    });
+  //   });
     
 
+  // }
+
+  Name(T_ID){
+    this.navCtrl.push("NamePage",T_ID);
   }
 
 }

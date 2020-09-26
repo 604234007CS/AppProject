@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
 
 /**
- * Generated class for the NamePage page.
+ * Generated class for the Name1Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,37 +12,32 @@ import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
-  selector: 'page-name',
-  templateUrl: 'name.html',
+  selector: 'page-name1',
+  templateUrl: 'name1.html',
 })
-export class NamePage {
+export class Name1Page {
   id;
-  regis : any = [];
+  regiss : any = [];
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public http:HttpClient) {
+  constructor(public navCtrl: NavController, public navParams: NavParams , public http:HttpClient) {
     this.id = this.navParams.data;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NamePage');
+    console.log('ionViewDidLoad Name1Page');
     console.log(this.id);
-      let url: string = "http://localhost/Appservice/show_register.php";
+    let url: string = "http://localhost/Appservice/show_register.php";
     let dataPost = new FormData();
     dataPost.append('id', this.id);
     let data: Observable<any> = this.http.post(url, dataPost);
     data.subscribe(data => {
         // console.log(data);
-        this.regis = data;
-        console.log(this.regis);
-  
+        this.regiss = data;
+        console.log(this.regiss);
+
     });
   }
-
-
-  // ionViewWillEnter(){
- 
   
-  // }
-}
 
+}

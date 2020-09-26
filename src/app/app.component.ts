@@ -41,12 +41,11 @@ export class MyApp {
     });
 
     event.subscribe('username:Loguot',()=>{
-      this.pages = [
+    this.pages = [
         { title: 'สำหรับผู้เข้าอบรม', component: HomePage },
         { title: 'สำหรับวิทยากร', component: LoginPage },
         ];
-    });
-
+    });  
   }
 
   initializeApp() {

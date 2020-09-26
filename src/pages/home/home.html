@@ -23,10 +23,12 @@
           <ion-label floating><p>รหัสผ่าน :</p></ion-label>
           <ion-input type="password"  value=""[(ngModel)]="logindata.password"></ion-input>
         </ion-item>
+
+        <button ion-button full color ="secondary" (click)="Login()" >เข้าสู่ระบบ</button>
+        <button ion-button full (click) ="RegisParticipants()">ลงทะเบียนผู้เข้าอบรม</button>
       </ion-list>
     
-      <button ion-button round full color ="secondary" (click)="Login()" >เข้าสู่ระบบ</button>
-      <button ion-button round full  (click) ="RegisParticipants()">ลงทะเบียนผู้เข้าอบรม</button>
+     
     
     
 

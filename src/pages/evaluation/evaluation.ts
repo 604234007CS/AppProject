@@ -24,7 +24,7 @@ export class EvaluationPage {
 
   Evaluation(){
     let url = 'http://localhost/Appservice/evaluate.php';
-    console.log(this.postdata.Transferable);
+    // console.log(this.postdata.Clarity);
     
     let postdataset = new FormData();
 

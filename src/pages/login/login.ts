@@ -4,7 +4,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Events } from 'ionic-angular';
-
 /**
  * Generated class for the LoginPage page.
  *
@@ -60,7 +59,6 @@ export class LoginPage {
         this.navCtrl.setRoot(LecturerPage,data);
         }
         console.log(data);
-
       });
 
                    

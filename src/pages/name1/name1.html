@@ -1,5 +1,5 @@
 <!--
-  Generated template for the NamePage page.
+  Generated template for the Name1Page page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -14,20 +14,19 @@
 
 
 <ion-content padding>
- 
+
   <p><b>รายชื่อผู้ลงทะเบียนเข้าอบรม </b></p>
   <table>
     <tr>
-       <th> ชื่อ-สกุล </th> 
-      <th> เบอร์โทรศัพท์ </th>
+      <!-- <th> คำนำหน้า </th> -->
+      <th> ชื่อ-สกุล </th> 
     </tr> 
   </table>
 
-  <table  *ngFor="let item of regis" >
+  <table  *ngFor="let item of regiss" >
     <tr>
-      <td>  &nbsp; &nbsp; {{item.Dir_Name}} {{item.P_Name}} </td>  
-      <td> {{item.Tell}} </td> 
+      <td> {{item.Dir_Name}} {{item.P_Name}}</td>  
+      <!-- <td> {{item.P_Name}}</td>  -->
     </tr>
   </table>
 </ion-content>
-

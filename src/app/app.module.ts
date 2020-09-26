@@ -4,7 +4,6 @@ import { LecturerPage } from './../pages/lecturer/lecturer';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
@@ -18,8 +17,6 @@ import { ParticipantsPage } from '../pages/participants/participants';
 import { LoaddataProvider } from '../providers/loaddata/loaddata';
 import { TrainDetialPage } from '../pages/train-detial/train-detial';
 import { LogoutPage } from '../pages/logout/logout';
-
-import { IonicStorageModule } from '@ionic/storage';
 import { LoginPage } from '../pages/login/login';
 
 
@@ -42,8 +39,7 @@ import { LoginPage } from '../pages/login/login';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
-    HttpClientModule,
-    IonicStorageModule.forRoot()
+    HttpClientModule
 
   ],
   bootstrap: [IonicApp],

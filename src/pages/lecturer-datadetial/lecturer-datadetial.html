@@ -21,9 +21,13 @@
     <p><b>วันที่ :</b>{{training.Date}}</p>
     <p><b>เวลา :</b>{{training.Time}}</p>
     <!-- <p><b>วิทยากร :</b>{{training.L_Name}}</p> -->
+
+
+    <button ion-button secondary full small (click)= "Name(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
+
   </ion-card-content>
 
-  <p><b>รายชื่อผู้เข้าอบรม </b></p>
+  <!-- <p><b>รายชื่อผู้เข้าอบรม </b></p>
   <table>
     <tr>
        <th> ชื่อ-สกุล </th> 
@@ -36,6 +40,6 @@
       <td> {{item.P_Name}} </td>  
       <td> {{item.Tell}} </td> 
     </tr>
-  </table>
+  </table> -->
 
 </ion-content>

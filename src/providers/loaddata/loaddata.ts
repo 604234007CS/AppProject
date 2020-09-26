@@ -20,7 +20,7 @@ export class LoaddataProvider {
   }
 
   searchtrain(query){
-    let url = "http://localhost/todoslim/public/search/"+query;
+    let url = "http://localhost/todoslim/public/search/"+query;   
     return this.http.get(url);
   }
 
