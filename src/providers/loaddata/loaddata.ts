@@ -29,4 +29,16 @@ export class LoaddataProvider {
     return this.http.get(url);
   }
 
+  sum_clairity(){
+    const url = "http://localhost/Appservice/summary/sum_Clarity.php";
+    return this.http.get(url);
+  }
+
+
+sum_ability(){
+  const url = "http://localhost/Appservice/summary/sum_ability.php";
+  return this.http.get(url);
+  }
+
+
 }

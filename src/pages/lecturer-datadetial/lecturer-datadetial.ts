@@ -53,4 +53,8 @@ export class LecturerDatadetialPage {
     this.navCtrl.push("NamePage",T_ID);
   }
 
+  summary(){
+    this.navCtrl.push("SummaryPage");
+  }
+
 }
