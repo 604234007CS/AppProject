@@ -1,4 +1,5 @@
 
+
 import { TrainPage } from './../pages/train/train';
 import { LecturerPage } from './../pages/lecturer/lecturer';
 import { BrowserModule } from '@angular/platform-browser';
@@ -30,6 +31,7 @@ import { LoginPage } from '../pages/login/login';
     TrainPage,
     TrainDetialPage,
     LoginPage,
+   
     
     
     
@@ -52,6 +54,7 @@ import { LoginPage } from '../pages/login/login';
     TrainPage,
     TrainDetialPage,
     LoginPage,
+    
 
    
     

@@ -3,11 +3,11 @@
   <ion-navbar>
     <ion-title>รายละเอียดการอบรม</ion-title>
 
-    <ion-buttons end>
-      <button ion-button color="dark" (click)="godelete()" >
+    <!-- <ion-buttons end>
+      <button ion-button color="dark" (click)="btdelete(training.regis_id)" >
         <ion-icon name="trash" ></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 
@@ -24,9 +24,10 @@
     <p><b>วิทยากร :</b>{{training.L_Name}}</p>
     
     
-    <button ion-button full small secondary (click)= "Evaluation()" >ประเมินผลการอบรม</button>
+    <button ion-button full small color ="secondary" (click)= "Evaluation()" >ประเมินผลการอบรม</button>
     <button ion-button full small secondary (click)= "Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
-   
+    <button ion-button full small color ="danger" (click)= "btdelete(training.regis_id)">ยกเลิกการลงทะเบียน</button>
+
 </ion-card-content>
 
 

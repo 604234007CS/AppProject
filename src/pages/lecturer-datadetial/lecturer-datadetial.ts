@@ -50,11 +50,16 @@ export class LecturerDatadetialPage {
   // }
 
   Name(T_ID){
+    console.log(T_ID);
     this.navCtrl.push("NamePage",T_ID);
   }
 
-  summary(){
-    this.navCtrl.push("SummaryPage");
+  summary(T_ID){
+    this.navCtrl.push("SummaryPage",T_ID);
+  }
+
+  upfile(){
+    
   }
 
 }
