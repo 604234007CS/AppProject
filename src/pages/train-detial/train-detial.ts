@@ -1,5 +1,8 @@
+import { HttpClient } from '@angular/common/http';
+import { LoaddataProvider } from './../../providers/loaddata/loaddata';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
@@ -10,10 +13,55 @@ export class TrainDetialPage {
   training: any=[];
   // data: Object=[];
 
-  
-  constructor(public navCtrl: NavController, public navParams: NavParams ) {
+  Tid;
+  data:any=[];
+  id;
+  postdata: any = {};
+  idp;
+  constructor(public navCtrl: NavController, public navParams: NavParams,public datas: LoaddataProvider, public http: HttpClient ) {
+    // this.Tid = this.navParams.get('Tid');
+    this.id = this.navParams.get('Tid');
+    this.idp = this.navParams.get('Pid');
+    console.log(this.idp);
+    console.log(this.id);
+    // this.id = this.navParams.get('Tid');
+    // console.log(this.id);
+
+
+    this.loaddata(this.id);
+    
+
   }
 
+  loaddata(id){
+    this.datas.loaddatatraindetail(id).subscribe((data:any)=>{
+        this.data = data;
+        console.log(data);   
+        // console.log(this.data[0]['T_ID']);
+    }) 
+  }
+
+
+  
+  regisTrain(){
+    let url = 'http://localhost/Appservice/regis/regis.php';
+
+    let postdataset = new FormData();
+
+    postdataset.append('T_ID', this.id);
+    postdataset.append('P_ID',this.idp);
+   
+
+    let callback:Observable<any> = this.http.post(url,postdataset);
+    callback.subscribe(call =>{
+      if(call.status == 200){
+        alert(call.msg);
+        this.navCtrl.pop();
+    }else{
+      alert(call.msg);
+    } 
+    });
+  }
 
 
   ionViewDidLoad() {
@@ -22,23 +70,12 @@ export class TrainDetialPage {
     console.log(this.training);
   }
 
-  RegisTrain(){
+ 
 
-  }
-  
   Name1(T_ID){
+    console.log(T_ID);
     this.navCtrl.push("Name1Page",T_ID);
   }
 
-  // Evaluation(){
-  //   this.navCtrl.push("EvaluationPage");
-  // }
-
-  // Register(){
-  //   this.navCtrl.push("RegisterPage");
-  // }
-
-  // Participants(){
-  //   this.navCtrl.push("ParticipantsPage");
-  // }
+ 
 }

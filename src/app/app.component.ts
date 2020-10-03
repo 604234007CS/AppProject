@@ -1,4 +1,4 @@
-import { TrainPage } from './../pages/train/train';
+// import { TrainPage } from './../pages/train/train';
 // import { LogoutPage } from './../pages/logout/logout';
 // import { EvaluationPage } from './../pages/evaluation/evaluation';
 // import { LecturerPage } from './../pages/lecturer/lecturer';
@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ParticipantsPage } from '../pages/participants/participants';
+// import { ParticipantsPage } from '../pages/participants/participants';
 import { LogoutPage } from '../pages/logout/logout';
 import { LoginPage } from '../pages/login/login';
 // import { RegisParticipantsPage } from '../pages/regis-participants/regis-participants';

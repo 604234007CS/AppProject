@@ -10,27 +10,27 @@
 <ion-content padding>
  
   <ion-item >
-    <ion-label fixed><p>คำนำหน้า : {{participantdata.Dir_Name}}</p></ion-label>
+    <ion-label fixed><p>คำนำหน้า : {{ldata.Dir_Name}}</p></ion-label>
     <ion-input type="text" value="" [(ngModel)]="postdata.Dir_Name" ></ion-input>
   </ion-item>
 
   <ion-item >
-    <ion-label fixed><p>ชื่อ-นามสกุล :{{participantdata.P_Name}}</p></ion-label>
+    <ion-label fixed><p>ชื่อ-นามสกุล :{{ldata.P_Name}}</p></ion-label>
     <ion-input type="text" value="" [(ngModel)]="postdata.P_Name" ></ion-input>
   </ion-item>
 
   <ion-item >
-    <ion-label fixed><p>หมายเลขโทรศัพท์ :{{participantdata.Tell}}</p></ion-label>
+    <ion-label fixed><p>หมายเลขโทรศัพท์ :{{ldata.Tell}}</p></ion-label>
     <ion-input type="text" value="" [(ngModel)] = "postdata.Tell"></ion-input>
   </ion-item>
 
   <ion-item >
-    <ion-label fixed><p>ชื่อผู้ใช้ :{{participantdata.Username}}</p></ion-label>
+    <ion-label fixed><p>ชื่อผู้ใช้ :{{ldata.Username}}</p></ion-label>
     <ion-input type="text" value="" [(ngModel)] = "postdata.Username" ></ion-input>
   </ion-item>
 
   <ion-item >
-    <ion-label fixed><p>รหัสผ่าน :{{participantdata.Password}}</p></ion-label>
+    <ion-label fixed><p>รหัสผ่าน :{{ldata.Password}}</p></ion-label>
     <ion-input type="password" value="" [(ngModel)] = "postdata.Password"></ion-input>
   </ion-item>
 

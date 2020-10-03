@@ -12,12 +12,12 @@ import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
-  selector: 'page-name',
-  templateUrl: 'name.html',
+  selector: 'page-name2',
+  templateUrl: 'name2.html',
 })
-export class NamePage {
+export class Name2Page {
   id;
-  regis : any = [];
+  register : any = [];
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http:HttpClient) {
@@ -25,16 +25,16 @@ export class NamePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NamePage');
-    console.log(this.id);
-      let url: string = "http://localhost/Appservice/show_register.php";
+    console.log('ionViewDidLoad NamePage2');
+    // console.log(this.id);
+    let url: string = "http://localhost/Appservice/show_register.php";
     let dataPost = new FormData();
     dataPost.append('id', this.id);
     let data: Observable<any> = this.http.post(url, dataPost);
     data.subscribe(data => {
-        // console.log(data);
-        this.regis = data;
-        console.log(this.regis);
+        console.log(data);
+        // this.register = data;
+        // console.log(this.register);
   
     });
   }

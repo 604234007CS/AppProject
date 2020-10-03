@@ -59,7 +59,13 @@ export class LecturerDatadetialPage {
   }
 
   upfile(){
-    
+    this.navCtrl.push("FilePage");
+
+  }
+
+
+  openfile(){
+    this.navCtrl.push("OpenfilePage");
   }
 
 }

@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
-import { LecturerPage } from '../lecturer/lecturer';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -34,16 +33,7 @@ export class HomePage {
       
 
       let url:string = "http://localhost/AppService/login.php";
-      // let dataPost = JSON.stringify({
-      //                   user:this.logindata.username,
-      //                   pass:this.logindata.password,
-      //                 });
-
-      // this.http.post(url,dataPost)
-      // .map(res=>res.json())
-      // .subscribe(data=>{
-      //     console.log(data);
-      // });
+     
       let dataPost = new FormData();
       dataPost.append('user', this.logindata.username);
       dataPost.append('pass', this.logindata.password);

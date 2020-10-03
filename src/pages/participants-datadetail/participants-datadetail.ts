@@ -38,7 +38,6 @@ export class ParticipantsDatadetailPage {
   }
 
 
-
   Evaluation(){
     this.navCtrl.push("EvaluationPage");
   }
@@ -48,9 +47,13 @@ export class ParticipantsDatadetailPage {
     this.navCtrl.push("Name1Page",T_ID);
   }
 
+  openfile(){
+    this.navCtrl.push("OpenfilePage")
+  }
+
+
   
-  
-    btdelete(regis_id){
+  btdelete(regis_id){
     let alert1 = this.alertCtrl.create({
       title: 'ยืนยันการลบ',
       message:'คุณต้องการลบรายการนี้ หรือไม่?',
@@ -64,12 +67,17 @@ export class ParticipantsDatadetailPage {
         {
           text: 'ใช่',
           handler: () => {
-            this.deletedata(regis_id)
+          this.deletedata(regis_id)
           }
         }
       ]
     });
     alert1.present();
   }
+
+  cer(){
+    this.navCtrl.push("CerPage")
+  }
+
 
 }

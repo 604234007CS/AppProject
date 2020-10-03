@@ -19,6 +19,8 @@ export class ParticipantsPage {
   
   logindata :any =[];
   train: any;
+
+  id;
   
   
   dataParti = [];
@@ -29,6 +31,7 @@ export class ParticipantsPage {
       // this.loadPData();
   }
 
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad ParticipantsPage');
     this.logindata = this.navParams.data;
@@ -47,7 +50,7 @@ export class ParticipantsPage {
 
   Trains(id){
     this.navCtrl.push(TrainPage,{
-      P_ID:id
+      id:id
     })
   }
 

@@ -17,10 +17,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TrainPage {
   data: Object;
+
+  id;
+  Tid;
+  Pid;
  
 
   
   constructor(public navCtrl: NavController, public navParams: NavParams,  public datas: LoaddataProvider) {
+
+    this.id = this.navParams.get('id');
+    console.log(this.id);
+    
   this.loaddata();
   }
 
@@ -33,6 +41,7 @@ export class TrainPage {
 
  
   loaddata(){
+
     this.datas.getTrain().subscribe(datas=>{
       this.data=datas;
       console.log(datas);
@@ -41,9 +50,14 @@ export class TrainPage {
  
 
 
-
-  getdetail(item){
-    this.navCtrl.push(TrainDetialPage,item);
+  getdetail(Tid){
+    console.log(this.id);
+    console.log(Tid);
+    
+    this.navCtrl.push(TrainDetialPage,{
+      Tid:Tid,
+      Pid:this.id
+    });
   }
 
   getItems(ev:any) {

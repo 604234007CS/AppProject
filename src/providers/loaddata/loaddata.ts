@@ -14,6 +14,16 @@ export class LoaddataProvider {
     console.log('Hello LoaddataProvider Provider');
   }
 
+  loaddatatraindetail(Tid){
+    const url = "http://localhost/AppService/traindetail.php?Tid="+Tid;
+    return this.http.get(url);
+  }
+
+  // regisTrain(){
+  //   const url = "http://localhost/Appservice/regis/regis.php";
+  //   return this.http.get(url);
+  // }
+
   getTrain(){
     const url = "http://localhost/AppService/train/loaddata.php";
     return this.http.get(url);
@@ -26,6 +36,16 @@ export class LoaddataProvider {
 
   showRe(){
     const url = "http://localhost/Appservice/show_register.php";
+    return this.http.get(url);
+  }
+
+  loadParticipants(){
+    const url = "http://localhost/Appservice/participants/loaddata.php";
+    return this.http.get(url);
+  }
+
+  loadLecturer(){
+    const url = "http://localhost/Appservice/lecturer/loaddata.php";
     return this.http.get(url);
   }
 
