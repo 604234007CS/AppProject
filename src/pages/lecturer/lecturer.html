@@ -5,7 +5,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="red">
     <!-- <ion-title>ข้อมูลวิทยากร</ion-title> -->
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -24,11 +24,10 @@
 <ion-content padding>
   <ion-item *ngFor="let item of logindata"> 
          <p>ชื่อ-สกุล : {{item.Dir_Name}} {{item.L_Name}}</p>
-         <!-- <p>ชื่อ : {{item.L_Name}}</p> -->
          <p>หมายลขโทรศัพท์ : {{item.Tell}}</p>
          <p>สถานที่ทำงาน : {{item.Workplace}}</p>
         
-         <button ion-button full small (click) ="LecturerData(item.L_ID)">เเสดงข้อมูลการอบรม</button>
+         <button ion-button full color="red" small (click) ="LecturerData(item.L_ID)">เเสดงข้อมูลการเป็นวิทยากร</button>
   </ion-item>
 
 

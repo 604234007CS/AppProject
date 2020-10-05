@@ -17,9 +17,13 @@ import { Observable } from 'rxjs/Observable';
 })
 export class EvaluationPage {
   postdata: any = {};
-
+  Tid;
+  id;
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public http: HttpClient) {
+    this.id = this.navParams.get('Tid');
+    console.log(this.id);
+
   }
 
   Evaluation(){
@@ -27,7 +31,7 @@ export class EvaluationPage {
     // console.log(this.postdata.Clarity);
     
     let postdataset = new FormData();
-
+    postdataset.append('T_ID', this.id);
     // postdataset.append('T_ID', this.postdata.T_ID);
     // postdataset.append('L_ID', this.postdata.L_ID);
     postdataset.append('Clarity', this.postdata.Clarity);

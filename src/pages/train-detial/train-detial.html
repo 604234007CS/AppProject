@@ -5,7 +5,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="red">
     <ion-title>รายละเอียดการอบรม</ion-title>
   </ion-navbar>
 </ion-header>
@@ -14,21 +14,18 @@
 <ion-content padding>
   <ion-card-content>
     <ion-item *ngFor="let data of data"> 
-      
-    <!-- <h2>รายละเอียดข้อมูลการอบรม</h2> -->
     <p><b>รายละเอียดข้อมูลการอบรม</b></p>
+    
     <p><b>ชื่อการอบรม :</b>{{data.T_Name}}</p>
     <p><b>สถานที่จัดอบรม :</b>{{data.Address}}</p>
     <p><b>วันที่ :</b>{{data.Date}}</p>
     <p><b>เวลา :</b>{{data.Time}}</p>
     <p><b>วิทยากร :</b>{{data.L_Name}}</p>
   </ion-item>
-    <!-- <button ion-button secondary full small (click)="Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button> -->
-    <button ion-button full small secondary (click)= "Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
-
-    <ion-buttons end>
-      <button ion-button secondary small (click)="regisTrain()" >ลงทะเบียน</button>
-    </ion-buttons>
+  
+    <button ion-button full small color="Chocolate" (click)= "Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
+    <button ion-button full color="red" small (click)="regisTrain()" >ลงทะเบียน</button>
+    
   
    
 

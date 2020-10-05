@@ -1,13 +1,7 @@
 
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="red">
     <ion-title>รายละเอียดการอบรม</ion-title>
-
-    <!-- <ion-buttons end>
-      <button ion-button color="dark" (click)="btdelete(training.regis_id)" >
-        <ion-icon name="trash" ></ion-icon>
-      </button>
-    </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 
@@ -15,7 +9,6 @@
 <ion-content padding>
 
   <ion-card-content >
-    <!-- <h2>รายละเอียดข้อมูลการอบรม</h2> -->
     <p><b>รายละเอียดข้อมูลการอบรม </b></p>
     <p><b>ชื่อการอบรม :</b>{{training.T_Name}}</p>
     <p><b>สถานที่จัดอบรม :</b>{{training.Address}}</p>
@@ -23,11 +16,10 @@
     <p><b>เวลา :</b>{{training.Time}}</p>
     <p><b>วิทยากร :</b>{{training.L_Name}}</p>
     
-    
-    <button ion-button full small color ="secondary" (click)= "Evaluation()" >ประเมินผลการอบรม</button>
-    <button ion-button full small secondary (click)= "Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
-    <button ion-button full small color ="dark" (click)= "cer()">ภาพใบประกาศนียบัตร</button>
-    <button ion-button full small color ="secondary" (click)= "openfile()">เปิดไฟล์</button>
+    <button ion-button full small color ="Chocolate" (click)= "Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
+    <button ion-button full small color ="MediumVioletRed" (click)= "openfile()">เปิดไฟล์</button>
+    <button ion-button full small color ="Brown" (click)= "cer()">ภาพใบประกาศนียบัตร</button>
+    <button ion-button full small color ="Maroon" (click)= "Evaluation()" >ประเมินผลการอบรม</button>
     <button ion-button full small color ="danger" (click)= "btdelete(training.regis_id)">ยกเลิกการลงทะเบียน</button>
 
 </ion-card-content>

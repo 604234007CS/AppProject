@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="red">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -30,8 +30,8 @@
     <p><b>ชื่อ-สกุล : </b>{{item.Dir_Name}} {{item.P_Name}}</p>
     <p><b>หมายเลขโทรศัพท์ : </b>{{item.Tell}}</p>
     
-    <button ion-button full  (click) ="ParticipantsData(item.P_ID)">เเสดงข้อมูลการลงทะเบียนอบรม</button>
-    <button ion-button full color ="secondary"  (click) ="Trains(item.P_ID)">การอบรม</button>
+    <button ion-button full color="red" (click) ="ParticipantsData(item.P_ID)">เเสดงข้อมูลการลงทะเบียนอบรม</button>
+    <button ion-button full color ="Brown" (click) ="Trains(item.P_ID)">การอบรม</button>
 
   </ion-item>
 

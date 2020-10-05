@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="red">
     <ion-title>ลงทะเบียนผู้เข้าอบรม</ion-title>
   </ion-navbar>
 
@@ -15,14 +15,6 @@
 
 <ion-content padding>
   <ion-list inset>
-    <!-- <ion-item>
-      <ion-label><P>คำนำหน้า :</P></ion-label>
-      <ion-select [(ngModel)]="postdata.DirName">
-        <ion-option value="นาย"><p>นาย</p></ion-option>
-        <ion-option value="นางสาว"><p>นางสาว</p></ion-option>
-        <ion-option value="นาง"><p>นาง</p></ion-option>
-      </ion-select>
-    </ion-item> -->
 
     <ion-item>
       <ion-label><p>คำนำหน้า :</p></ion-label>
@@ -50,5 +42,5 @@
     </ion-item>
     
   </ion-list>
-  <button ion-button full  secondary (click)= "Register1()" >ลงทะเบียน</button>
+  <button ion-button full small color="red" (click)= "Register1()" >ลงทะเบียน</button>
 </ion-content>

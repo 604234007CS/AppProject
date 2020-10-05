@@ -18,6 +18,10 @@ export class LoaddataProvider {
     const url = "http://localhost/AppService/traindetail.php?Tid="+Tid;
     return this.http.get(url);
   }
+  loaddatatrainregister(Pid){
+    const url = "http://localhost/AppService/registrain.php?Pid="+Pid;
+    return this.http.get(url);
+  }
 
   // regisTrain(){
   //   const url = "http://localhost/Appservice/regis/regis.php";

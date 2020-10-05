@@ -78,6 +78,4 @@ export class ParticipantsDatadetailPage {
   cer(){
     this.navCtrl.push("CerPage")
   }
-
-
 }

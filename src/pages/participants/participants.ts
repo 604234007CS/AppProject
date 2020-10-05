@@ -21,6 +21,7 @@ export class ParticipantsPage {
   train: any;
 
   id;
+  pid;
   
   
   dataParti = [];
@@ -45,7 +46,9 @@ export class ParticipantsPage {
 
   
   ParticipantsData(id){
-    this.navCtrl.push("ParticipantsDataPage",id);
+    this.navCtrl.push("ParticipantsDataPage",{
+      pid:id
+    });
   }
 
   Trains(id){
