@@ -55,53 +55,57 @@ export class LoaddataProvider {
 
 
   // สรุปการประเมิน
-  sum_clairity(){
-    const url = "http://localhost/Appservice/summary/sum_Clarity.php";
+  sum_clairity(id){
+    const url = "http://localhost/Appservice/summary/sum_Clarity.php?id="+id;
     return this.http.get(url);
   }
 
 
-sum_ability(){
-  const url = "http://localhost/Appservice/summary/sum_ability.php";
+sum_ability(id){
+  const url = "http://localhost/Appservice/summary/sum_ability.php?id="+id;
   return this.http.get(url);
   }
 
-  sum_contentAssociation(){
-    const url = "http://localhost/Appservice/summary/sum_ContentAssociation.php";
+  sum_contentAssociation(id){
+    const url = "http://localhost/Appservice/summary/sum_ContentAssociation.php?id="+id;
     return this.http.get(url);
 
   }
 
-  sum_completeness(){
-    const url ="http://localhost/Appservice/summary/sum_Completeness.php";
+  sum_completeness(id){
+    const url ="http://localhost/Appservice/summary/sum_Completeness.php?id="+id;
     return this.http.get(url);
   }
 
-  sum_BeforeTraining(){
-    const url ="http://localhost/Appservice/summary/sum_BeforeTraining.php";
+  sum_BeforeTraining(id){
+    const url ="http://localhost/Appservice/summary/sum_BeforeTraining.php?id="+id;
     return this.http.get(url);
   }
 
-  sum_AfterTraining(){
-    const url ="http://localhost/Appservice/summary/sum_AfterTraining.php";
+  sum_AfterTraining(id){
+    const url ="http://localhost/Appservice/summary/sum_AfterTraining.php?id="+id;
     return this.http.get(url);
   }
 
-  sum_Applied(){
-    const url =" http://localhost/Appservice/summary/sum_Applied.php";
+  sum_Applied(id){
+    const url =" http://localhost/Appservice/summary/sum_Applied.php?id="+id;
     return this.http.get(url);
   }
 
-  sum_KnowledgeGained(){
-    const url ="http://localhost/Appservice/summary/sum_KnowledgeGained.php";
+  sum_KnowledgeGained(id){
+    const url ="http://localhost/Appservice/summary/sum_KnowledgeGained.php?id="+id;
     return this.http.get(url);
   }
 
-  sum_Transferable(){
-    const url ="http://localhost/Appservice/summary/sum_Transferable.php";
+  sum_Transferable(id){
+    const url ="http://localhost/Appservice/summary/sum_Transferable.php?id="+id;
     return this.http.get(url);
   }
 
+ Suggestion(id){
+    const url =  "http://localhost/Appservice/summary/sum_Suggestion.php?id="+id;
+    return this.http.get(url);
+ }
  
  
 

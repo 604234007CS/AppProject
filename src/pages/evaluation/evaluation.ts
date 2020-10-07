@@ -25,10 +25,10 @@ export class EvaluationPage {
     console.log(this.id);
 
   }
-
   Evaluation(){
     let url = 'http://localhost/Appservice/evaluate.php';
     // console.log(this.postdata.Clarity);
+    console.log(this.id);
     
     let postdataset = new FormData();
     postdataset.append('T_ID', this.id);

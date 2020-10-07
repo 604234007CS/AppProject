@@ -14,14 +14,11 @@
 
 </ion-header>
 
-
 <ion-content padding>
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-
-<ion-item *ngFor="let item of data"  (click)="getdetail(item.T_ID)" > 
-  <p>{{item.T_Name}}</p>
-
-</ion-item>
-
-
+  
+    <ion-item *ngFor="let item of data"  (click)="getdetail(item.T_ID)" > 
+      <p>{{item.T_Name}}</p>
+    </ion-item>
+  
 </ion-content>

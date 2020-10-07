@@ -9,6 +9,7 @@
 <ion-content padding>
 
   <ion-card-content >
+
     <p><b>รายละเอียดข้อมูลการอบรม </b></p>
     <p><b>ชื่อการอบรม :</b>{{training.T_Name}}</p>
     <p><b>สถานที่จัดอบรม :</b>{{training.Address}}</p>
@@ -17,9 +18,9 @@
     <p><b>วิทยากร :</b>{{training.L_Name}}</p>
     
     <button ion-button full small color ="Chocolate" (click)= "Name1(training.T_ID)">รายชื่อผู้เข้าอบรม</button>
-    <button ion-button full small color ="MediumVioletRed" (click)= "openfile()">เปิดไฟล์</button>
-    <button ion-button full small color ="Brown" (click)= "cer()">ภาพใบประกาศนียบัตร</button>
-    <button ion-button full small color ="Maroon" (click)= "Evaluation()" >ประเมินผลการอบรม</button>
+    <button ion-button full small color ="MediumVioletRed" (click)= "openfile()">เอกสารประกอบการอบรม</button>
+    <button ion-button full small color ="Brown" (click)= "cer()">ใบประกาศนียบัตร</button>
+    <button ion-button full small color ="Maroon" (click)= "Evaluation(training.T_ID)" >ประเมินผลการอบรม</button>
     <button ion-button full small color ="danger" (click)= "btdelete(training.regis_id)">ยกเลิกการลงทะเบียน</button>
 
 </ion-card-content>

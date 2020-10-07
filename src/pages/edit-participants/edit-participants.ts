@@ -49,7 +49,7 @@ export class EditParticipantsPage {
      console.log(this.ldata[0]['P_ID']);
 
      if(this.participantdata[0]['P_ID'] == this.ldata[0]['P_ID']){
-     this.P_ID = this.ldata[0]['P_ID'];    
+    this.P_ID = this.ldata[0]['P_ID'];    
     this.Dir_Name = this.ldata[0]['Dir_Name'];
     this.P_Name = this.ldata[0]['P_Name'];
     this.Tell = this.ldata[0]['Tell'];

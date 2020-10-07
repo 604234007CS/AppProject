@@ -18,7 +18,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class LecturerDatadetialPage {
   training: any=[];
-
+  Tid;
   id;
   regis : any = [];
 
@@ -54,8 +54,12 @@ export class LecturerDatadetialPage {
     this.navCtrl.push("NamePage",T_ID);
   }
 
-  summary(T_ID){
-    this.navCtrl.push("SummaryPage",T_ID);
+  summary(Tid){
+    console.log(Tid);
+
+    this.navCtrl.push("SummaryPage",{
+      Tid:Tid
+    });
   }
 
   upfile(){

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoaddataProvider } from '../../providers/loaddata/loaddata';
-// import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Observable';
 declare var google;
 
 @IonicPage()
@@ -20,46 +20,43 @@ export class SummaryPage {
   sum_Applied : any = {};
   sum_KnowledgeGained : any = {};
   sum_Transferable  : any = {};
-
+  Tid;
   id;
+  data: Object;
+
   // Suggestion : any =[];
 
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public loaddata : LoaddataProvider,public http: HttpClient) {
     // this.id = this.navParams.data;
-    this.showchart1();
-    this.showchart2();
-    this.showchart3();
-    this.showchart4();
-    this.showchart5();
-    this.showchart6();
-    this.showchart7();
-    this.showchart8();
-    this.showchart9();
+    this.id = this.navParams.get('Tid');
+    console.log(this.id);
+
+   
+
+    this.showchart1(this.id);
+    this.showchart2(this.id);
+    this.showchart3(this.id);
+    this.showchart4(this.id);
+    this.showchart5(this.id);
+    this.showchart6(this.id);
+    this.showchart7(this.id);
+    this.showchart8(this.id);
+    this.showchart9(this.id);
     // this.suggestion();
+
+   
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SummaryPage');
-
-    // console.log(this.id);
-    // let url: string = "http://localhost/Appservice/summary/sum_Suggestion.php";
-    // let dataPost = new FormData();
-    // dataPost.append('id', this.id);
-    // let data: Observable<any> = this.http.post(url, dataPost);
-    // data.subscribe(data => {
-    //     console.log(data);
-    //     // this.Suggestion = data;
-    //     // console.log(this.Suggestion);
-
-    // });
   }
 
 
 
-  showchart1(){
-    this.loaddata.sum_clairity().subscribe(data=>{
+  showchart1(id){
+    this.loaddata.sum_clairity(this.id).subscribe(data=>{
       this.sum_Clarity = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -80,8 +77,8 @@ export class SummaryPage {
   }
 
 
-  showchart2(){
-    this.loaddata.sum_ability().subscribe(data=>{
+  showchart2(id){
+    this.loaddata.sum_ability(this.id).subscribe(data=>{
       this.sum_Ability = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -101,8 +98,8 @@ export class SummaryPage {
         
   }
 
-  showchart3(){
-    this.loaddata.sum_contentAssociation().subscribe(data=>{
+  showchart3(id){
+    this.loaddata.sum_contentAssociation(this.id).subscribe(data=>{
       this.sum_ContentAssociation = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -119,12 +116,11 @@ export class SummaryPage {
         var chart = new google.visualization.PieChart(document.getElementById('chart_div3'));
         chart.draw(dataset, options);
       });
-        
   }
 
 
-  showchart4(){
-    this.loaddata.sum_completeness().subscribe(data=>{
+  showchart4(id){
+    this.loaddata.sum_completeness(this.id).subscribe(data=>{
       this.sum_Completeness = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -145,8 +141,8 @@ export class SummaryPage {
   }
   
   
-  showchart5(){
-    this.loaddata.sum_BeforeTraining().subscribe(data=>{
+  showchart5(id){
+    this.loaddata.sum_BeforeTraining(this.id).subscribe(data=>{
       this.sum_BeforeTraining = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -167,8 +163,8 @@ export class SummaryPage {
   }
 
 
-  showchart6(){
-    this.loaddata.sum_AfterTraining().subscribe(data=>{
+  showchart6(id){
+    this.loaddata.sum_AfterTraining(this.id).subscribe(data=>{
       this.sum_AfterTraining = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -188,8 +184,8 @@ export class SummaryPage {
         
   }
 
-  showchart7(){
-    this.loaddata.sum_Applied().subscribe(data=>{
+  showchart7(id){
+    this.loaddata.sum_Applied(this.id).subscribe(data=>{
       this.sum_Applied = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -210,8 +206,8 @@ export class SummaryPage {
   }
 
 
-  showchart8(){
-    this.loaddata.sum_KnowledgeGained().subscribe(data=>{
+  showchart8(id){
+    this.loaddata.sum_KnowledgeGained(this.id).subscribe(data=>{
       this.sum_KnowledgeGained = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -231,8 +227,8 @@ export class SummaryPage {
         
   }
 
-  showchart9(){
-    this.loaddata.sum_Transferable().subscribe(data=>{
+  showchart9(id){
+    this.loaddata.sum_Transferable(this.id).subscribe(data=>{
       this.sum_Transferable = data;
       console.log(data);
     var dataset = new google.visualization.DataTable();
@@ -251,17 +247,11 @@ export class SummaryPage {
       });
   }
 
-  // suggestion(){
-  //   //  console.log(this.id);
-  //   let url: string = "http://localhost/Appservice/summary/sum_Suggestion.php";
-  //   let dataPost = new FormData();
-  //   dataPost.append('id', this.id);
-  //   let data: Observable<any> = this.http.post(url, dataPost);
-  //   data.subscribe(data => {
-  //       // console.log(data);
-  //       this.Suggestion = data;
-  //       console.log(this.Suggestion);
+  // getSuggestion(id){
 
+  //   this.loaddata.Suggestion(id).subscribe(loaddata=>{
+  //     this.data=loaddata;
+  //     console.log(loaddata);
   //   });
   // }
 

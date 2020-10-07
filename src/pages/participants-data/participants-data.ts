@@ -11,6 +11,7 @@ import { LoaddataProvider } from './../../providers/loaddata/loaddata';
  * Ionic pages and navigation.
  */
 
+ 
 @IonicPage()
 @Component({
   selector: 'page-participants-data',
@@ -28,7 +29,7 @@ export class ParticipantsDataPage {
     console.log(this.Pid);
 
     this.loaddata(this.Pid);
-    
+
   }
 
   ionViewDidLoad() {

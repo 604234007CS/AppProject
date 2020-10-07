@@ -49,7 +49,6 @@ export class TrainPage {
   }
  
 
-
   getdetail(Tid){
     console.log(this.id);
     console.log(Tid);

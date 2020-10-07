@@ -9,23 +9,24 @@
 
 <ion-content padding>
   <p><b>ข้อมูลการลงทะเบียนอบรม</b></p>
- 
+
  
   <table>
     <tr>
-      <th> ชื่อการอบรม &nbsp; &nbsp;</th>  
-      <th>  วันที่่ </th>
+      <th>ชื่อการอบรม</th>  
+      <th>วันที่่</th>
+      <th>รายละเอียด</th>
     </tr> 
   </table>
 
-  <table  *ngFor="let item of data" (click)="getdetail(item)">
+  <table  *ngFor="let item of data" >
     <tr>
-      <td> &nbsp;{{item.T_Name}} </td>  
+      <td> {{item.T_Name}} </td>  
       <td> {{item.Date}} </td> 
+      <td> <ion-icon ios="ios-eye" md="md-eye" (click)="getdetail(item)"></ion-icon></td>
     </tr>
   </table>
-
-
+<!-- 
+  (click)="getdetail(item)" -->
 
 </ion-content>
-© 2020 GitHub, Inc.
