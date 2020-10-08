@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs';
+import * as Enums from '../enums/enums';
 
 /**
  * Generated class for the EditLecturerPage page.
@@ -67,7 +68,7 @@ export class EditLecturerPage {
   }
 
   Edit1(){
-    let url = 'http://localhost/Appservice/lecturer/edit.php';
+    let url = Enums.APIURL.URL + '/Appservice/lecturer/edit.php';
 
     let postdataset = new FormData();
     postdataset.append('L_ID', this.L_ID.toString());

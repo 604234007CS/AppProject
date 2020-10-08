@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import * as Enums from '../enums/enums';
 
 
 
@@ -21,7 +22,7 @@ export class RegisLecturerPage {
   }
 
   Register(){
-      let url = 'http://localhost/AppService/lecturer/insert_regis.php';
+      let url = Enums.APIURL.URL + '/AppService/lecturer/insert_regis.php';
 
       let postdataset = new FormData();
   

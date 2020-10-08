@@ -2,12 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
-/**
- * Generated class for the LecturerDataPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import * as Enums from '../enums/enums';
+
 
 @IonicPage()
 @Component({
@@ -28,7 +24,7 @@ export class LecturerDataPage {
   ionViewWillEnter() {
     console.log(this.id);
 
-    let url: string = "http://localhost/Appservice/lecturer/lecturer_data.php";
+    let url: string = Enums.APIURL.URL + "/Appservice/lecturer/lecturer_data.php";
     let dataPost = new FormData();
     dataPost.append('id', this.id);
     let data: Observable<any> = this.http.post(url, dataPost);

@@ -1,9 +1,11 @@
+import { ParticipantsPage } from './../participants/participants';
 import { HttpClient } from '@angular/common/http';
 import { LoaddataProvider } from './../../providers/loaddata/loaddata';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController,Events } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import * as Enums from '../enums/enums';
+
 
 @IonicPage()
 @Component({
@@ -16,19 +18,19 @@ export class TrainDetialPage {
   // cid:any=[];
   Tid;
   data:any=[];
-  id;
+  tid;
   postdata: any = {};
-  idp;
+  pid;
   constructor(public navCtrl: NavController, public navParams: NavParams,public datas: LoaddataProvider, 
-              public http: HttpClient , public alertCtrl : AlertController) {
+              public http: HttpClient , public alertCtrl : AlertController,public event : Events) {
     // this.Tid = this.navParams.get('Tid');
-    this.id = this.navParams.get('Tid');
-    this.idp = this.navParams.get('Pid');
-    console.log(this.idp);
-    console.log(this.id);
+    this.tid = this.navParams.get('Tid');
+    this.pid = this.navParams.get('Pid');
+    console.log('tid',this.pid);
+    console.log('pid',this.tid);
     // this.id = this.navParams.get('Tid');
     // console.log(this.id);
-    this.loaddata(this.id);
+    this.loaddata(this.tid);
   }
 
   loaddata(id){
@@ -38,52 +40,188 @@ export class TrainDetialPage {
         // console.log(this.data[0]['T_ID']);
     }) 
   }
- 
+
+
   regisTrain(){
-    console.log(this.idp);     
-    console.log(this.id);     
 
-    let url = Enums.APIURL.URL + '/Appservice/regis/regis.php';
-    let url1 = Enums.APIURL.URL + '/Appservice/checkregis.php?pid='+this.idp+'&&tid='+this.id;
-    this.http.get(url1).subscribe((data:any)=>{
-      console.log(data);
-      console.log(data['P_ID']);
+    if(this.tid != "" && this.pid != ""){
+      console.log("tid:",this.tid);
+      console.log("pid:",this.pid);
 
+      let url1 = Enums.APIURL.URL + '/Appservice/regis/regis.php';
 
-      if(data['P_ID'] == this.idp && data['T_ID'] == this.id){
-        const alert = this.alertCtrl.create({
-          title: 'เกิดข้อพิดผลาด',
-          subTitle: 'คุณได้ลงทะเบียนนี้ไปแล้ว',
-          buttons: ['OK']
+      let url:string = Enums.APIURL.URL + "/AppService/testcheckregis.php";
+     
+      let dataPost = new FormData();
+      dataPost.append('tid', this.tid);
+      dataPost.append('pid', this.pid);
+            
+      let data:Observable<any> = this.http.post(url,dataPost);data.subscribe((data:any)=>{
+        console.log(data);
+        // console.log(data.T_ID);
+        console.log(data[0]['T_ID']);
+        console.log(data[0]['P_ID']);
+        if(data[0]['T_ID'] == this.tid && data[0]['P_ID'] == this.pid){
+          console.log("1");
           
-        });
-        alert.present();
-      }
-      // else if(data['P_ID'] != this.idp && data['T_ID'] != this.id){
-      //   let setdata = JSON.stringify({
-      //     P_ID: this.idp
-      //   })
-      // }
+          const alert = this.alertCtrl.create({
+            title: 'เกิดข้อพิดผลาด',
+            subTitle: 'คุณได้ลงทะเบียนนี้ไปแล้ว',
+            buttons: ['OK']
+            
+          });
+          alert.present();
+        }else {
+          console.log("2");
+          
+          let dataset = JSON.stringify({
+            T_ID:this.tid,
+            P_ID:this.pid
+          });
+          let datapost = JSON.parse(dataset);
+          const confirm = this.alertCtrl.create({
+            title: 'ยืนยันการลงทะเบียน',
+            message: 'กดปุ่มยืนยันการลงทะเบียน',
+            buttons:[{
+              text: 'ยืนยัน',
+              handler:()=>{
+                this.http.post(url1,datapost).subscribe((data:any)=>{
+                  console.log(data);
+                  if(data != null){
+                    const alert = this.alertCtrl.create({
+                      title: 'สำเร็จ',
+                      subTitle: 'เพิ่มการลงทะเบียนสำเร็จ',
+                      buttons:[{
+                        text: 'ตกลง',
+                        handler:()=>{
+                         this.navCtrl.pop();
+                        }
+                      }]
+                    })
+                  }
+                  
+                })
+              }
+            }]
+          })
+     
+  
+      // //  let callback:Observable<any> = this.http.post(url,postdataset);
+      // //  callback.subscribe(call =>{
+      // //   if(call.status == 200){
+      // //     alert(call.msg);
+      // //     this.navCtrl.pop();
+      // //   }else{
+      // //   alert(call.msg);
+      // // } 
+      // // });
+  
+        }
+      });
+      // data.subscribe(data =>{
 
-    })
-    let postdataset = new FormData();
+      //   console.log(data);
+        
 
-    postdataset.append('T_ID', this.id);
-    postdataset.append('P_ID',this.idp);
+      //   if(data != null){
+
+          
+      //   this.event.publish('username:Login');
+
+      //   this.navCtrl.setRoot(ParticipantsPage,data);
+      //   }else{
+
+      //   }
+      //   console.log(data);
+
+      // });
+
+                   
+    }else{
+      console.log("Enter Password");
+      alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+    }
+  }
+
+
+ 
+  // regissTrain(){
+  //   console.log(this.pid);     
+  //   console.log(this.tid);     
+  //   // console.log(this.id);     
+
+  //   let url = Enums.APIURL.URL + '/Appservice/regis/regis.php';
+  //   console.log("1");
+  
+  //   let url1 = 'http://localhost/Appservice/CheckRegis.php?tid='+this.tid+'&&pid='+this.pid;
+  //   console.log("2");
+  //   this.http.get(url1).subscribe((data:any)=>{
+  //     console.log(data);
+
+  //     console.log('databaseT_ID',data['T_ID']);
+  //     console.log('databaseP_ID',data['P_ID']);
+  //     console.log('tid',this.tid);
+  //     console.log('pid',this.pid);
+  //     // console.log(data['P_ID']);
+
+  //    if(data['T_ID'] == this.tid && data['P_ID'] == this.pid){
+  //       const alert = this.alertCtrl.create({
+  //         title: 'เกิดข้อพิดผลาด',
+  //         subTitle: 'คุณได้ลงทะเบียนนี้ไปแล้ว',
+  //         buttons: ['OK']
+          
+  //       });
+  //       alert.present();
+  //     }
+  //     else if(data['T_ID'] != this.tid && data['P_ID'] != this.pid){
+  //       let dataset = JSON.stringify({
+  //         T_ID:this.tid,
+  //         P_ID:this.pid
+  //       });
+  //       let datapost = JSON.parse(dataset);
+  //       const confirm = this.alertCt rl.create({
+  //         title: 'ยืนยันการลงทะเบียน',
+  //         message: 'กดปุ่มยืนยันการลงทะเบียน',
+  //         buttons:[{
+  //           text: 'ยืนยัน',
+  //           handler:()=>{
+  //             this.http.post(url,datapost).subscribe((data:any)=>{
+  //               console.log(data);
+  //               if(data != null){
+  //                 const alert = this.alertCtrl.create({
+  //                   title: 'สำเร็จ',
+  //                   subTitle: 'เพิ่มการลงทะเบียนสำเร็จ',
+  //                   buttons:[{
+  //                     text: 'ตกลง',
+  //                     handler:()=>{
+  //                      this.navCtrl.pop();
+  //                     }
+  //                   }]
+  //                 })
+  //               }
+                
+  //             })
+  //           }
+  //         }]
+  //       })
    
 
-    let callback:Observable<any> = this.http.post(url,postdataset);
-    callback.subscribe(call =>{
-      if(call.status == 200){
-        alert(call.msg);
-        this.navCtrl.pop();
-    }else{
-      alert(call.msg);
-    } 
-    });
+  //   // //  let callback:Observable<any> = this.http.post(url,postdataset);
+  //   // //  callback.subscribe(call =>{
+  //   // //   if(call.status == 200){
+  //   // //     alert(call.msg);
+  //   // //     this.navCtrl.pop();
+  //   // //   }else{
+  //   // //   alert(call.msg);
+  //   // // } 
+  //   // // });
 
+  //     }
 
-  }
+  //   })
+    
+
+  // }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TrainDetialPage');

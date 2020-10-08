@@ -106,7 +106,18 @@ sum_ability(id){
     const url =  "http://localhost/Appservice/summary/sum_Suggestion.php?id="+id;
     return this.http.get(url);
  }
+
+ //end ประเมินผล
+
+ checkregister(tid,pid){
+  const url = "http://localhost/Appservice/CheckRegis.php?tid="+tid+"&&pid="+pid;
+ }
  
+
+ showcer(regis_id){
+   const url = "http://localhost/Appservice/showcer.php?regis_id="+regis_id;
+   return this.http.get(url);
+ }
  
 
 }

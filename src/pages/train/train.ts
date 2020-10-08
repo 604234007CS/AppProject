@@ -50,8 +50,8 @@ export class TrainPage {
  
 
   getdetail(Tid){
-    console.log(this.id);
-    console.log(Tid);
+    // console.log(this.id);
+    // console.log(Tid);
     
     this.navCtrl.push(TrainDetialPage,{
       Tid:Tid,

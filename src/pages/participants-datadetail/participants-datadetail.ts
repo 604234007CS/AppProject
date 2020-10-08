@@ -80,7 +80,7 @@ export class ParticipantsDatadetailPage {
     alert1.present();
   }
 
-  cer(){
-    this.navCtrl.push("CerPage")
+  cer(regis_id){
+    this.navCtrl.push("CerPage",regis_id)
   }
 }

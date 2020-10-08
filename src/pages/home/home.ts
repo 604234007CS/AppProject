@@ -3,6 +3,10 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, Events } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
+import * as Enums from '../enums/enums';
+
+
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -32,7 +36,7 @@ export class HomePage {
 
       
 
-      let url:string = "http://localhost/AppService/login.php";
+      let url:string = Enums.APIURL.URL + "/AppService/login.php";
      
       let dataPost = new FormData();
       dataPost.append('user', this.logindata.username);

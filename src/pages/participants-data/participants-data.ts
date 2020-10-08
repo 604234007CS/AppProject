@@ -3,13 +3,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs';
 import { LoaddataProvider } from './../../providers/loaddata/loaddata';
-
-/**
- * Generated class for the ParticipantsDataPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import * as Enums from '../enums/enums';
 
  
 @IonicPage()
@@ -47,7 +41,7 @@ export class ParticipantsDataPage {
   ionViewWillEnter(){
     console.log(this.id);
 
-    let url: string = "http://localhost/Appservice/participants/participants_data.php";
+    let url: string = Enums.APIURL.URL + "/Appservice/participants/participants_data.php";
     let dataPost =  new FormData();
     dataPost.append('id', this.id);
     let data: Observable<any> = this.http.post(url, dataPost);

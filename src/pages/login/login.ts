@@ -4,6 +4,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import { Events } from 'ionic-angular';
+import * as Enums from '../enums/enums';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -35,7 +37,7 @@ export class LoginPage {
 
       
 
-      let url:string = "http://localhost/AppService/login1.php";
+      let url:string = Enums.APIURL.URL +  "/AppService/login1.php";
       // let dataPost = JSON.stringify({
       //                   user:this.logindata.username,
       //                   pass:this.logindata.password,

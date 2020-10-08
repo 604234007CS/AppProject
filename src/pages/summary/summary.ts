@@ -247,13 +247,13 @@ export class SummaryPage {
       });
   }
 
-  // getSuggestion(id){
+  getSuggestion(id){
 
-  //   this.loaddata.Suggestion(id).subscribe(loaddata=>{
-  //     this.data=loaddata;
-  //     console.log(loaddata);
-  //   });
-  // }
+    this.loaddata.Suggestion(id).subscribe(loaddata=>{
+      this.data=loaddata;
+      console.log(loaddata);
+    });
+  }
 
 
 
